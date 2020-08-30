@@ -12,6 +12,30 @@
 Change Log
 
 
+2020/08/31 : 2020/08/30 #1
+
+
+BUGFIX
+
+
+	win32/win_simplemenu.c
+		flat border
+			OLD : always handled as 2px
+			NEW : fixed
+		check
+			OLD : draw error
+			NEW : fixed
+		XP/Vista/7 : classic theme
+			OLD : draw error
+			NEW : fixed
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
 2020/08/30
 
 
