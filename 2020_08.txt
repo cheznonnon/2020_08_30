@@ -1,0 +1,189 @@
+
+
+----------==========----------==========----------==========----------
+
+
+"Eat Your Own Catfood."
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2020/08/30
+
+
+BUGFIX
+
+
+	neutral/curico.c
+		n_curico_multi_pack() : when there are no files
+			OLD : crash
+			NEW : fixed
+
+	win32/win_scrollbar.c
+		thumb : when drag to zero
+			OLD : not redrawn until clicking is released
+			NEW : fixed
+
+	Nonnon Paint
+		Loader
+			OLD : crash in some cases
+			NEW : fixed
+			[!] : n_curico_multi_pack() causes
+
+
+NEW_FEATURE
+
+
+	win32/gdi.c
+		N_GDI_FONT_MONOSPACE_2, TEXT_MONOSPACE_2
+			NEW : for printer
+			[!] : hankaku/zenkaku will be handled as different
+		N_GDI_TEXT_PRINTER
+			NEW : for printer
+			[!] : ANTIALIASED_QUALITY is used
+			[!] : 5x faster than N_GDI_TEXT_SMOOTH
+			[!] : Win95 needs "w95gray.exe"
+
+	CatPad
+		F12 : Printer Support
+			NEW : hidden function
+			[!] : monospace and forced 1 page print-out
+			[!] : currently very rough implementation
+			[?] : I need this
+	Nonnon Paint
+		F12 : Printer Support
+			NEW : hidden function
+			[!] : non-stretched print-out available
+			[!] : currently very rough implementation
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2020/08/20
+
+
+BUGFIX
+
+
+	win32/win_iconbutton.c
+		WinXP : Visual Style is ON
+			OLD : icons are not drawn
+			NEW : fixed
+			[?] : ILC_ORIGINALSIZE is handled as error on XP
+			[x] : BUGFIX @ 2020/04/20
+
+	All
+		WinXP : Visual Style is ON
+			OLD : icons are not drawn
+			NEW : fixed
+			[x] : BUGFIX @ 2020/04/20
+	CatPad
+		64-bit Version : window size
+			OLD : changed run by run
+			NEW : fixed
+	LINE MASHER 2
+		power-up : when you get some item
+			OLD : garbage pixels
+			NEW : fixed
+			[!] : margin causes
+			[!] : zoom has x4 or higher only
+	Nekomimi Nina
+		High-DPI : walking animation
+			OLD : too fast
+			NEW : fixed
+	Nekomimi Nina RPG
+		when a monster is pinch
+			OLD : inaccurate frame when heal
+			NEW : fixed
+	nmemo
+		64-bit Version : window size
+			OLD : changed run by run
+			NEW : fixed
+	Nonnon Paint
+		Ctrl2Drag
+			OLD : conflict with child windows
+			NEW : fixed
+		Quick Eraser
+			OLD : conflict
+			NEW : disabled on non canvas windows
+	OrangeCat
+		Info View : when a window is resized
+			OLD : not redrawn
+			NEW : fixed
+			[x] : ??? @ 2020/04/30
+	Pen Trainer
+		UI : when pressed
+			OLD : hover state is not remade
+			NEW : fixed
+
+
+NEW_FEATURE
+
+
+	win32/win_colorpicker.c
+		scroller : shaft
+			NEW : richer than older
+	win32/win_scrollbar.c
+		N_WIN_SCROLLBAR_OPTION_SHAFT_COLOR
+			NEW : for color picker
+
+	Nonnon Paint
+		Color Picker UI
+			NEW : richer than older
+	Pen Trainer
+		Dark Mode
+			NEW : re-tuned
+
+
+----------==========----------==========----------==========----------
+
+
+Change Log
+
+
+2020/08/10
+
+
+BUGFIX
+
+
+	win32/win_scroller.c
+		n_win_scroller_proc() : when a thumb is clicked
+			OLD : do nothing
+			NEW : refresh a scrollbar
+
+	Nonnon Paint
+		Ctrl2Drag
+			OLD : conflict with color picker on tool window
+			NEW : fixed
+		Color Picker : grayscale
+			OLD : nothing happens when a thumb is clicked
+			NEW : fixed
+			[x] : ???
+		Multi-Layer : Grabber : when transformed : cancel
+			OLD : garbage remains
+			NEW : fixed
+
+
+NEW_FEATURE
+
+
+	Nonnon Paint
+		Multi-Layer : "Whole Grab" : when started from invisible layer
+			OLD : not editable with all layers
+			NEW : editable when layer focus is changed
+		Preview : title bar
+			NEW : pixel delta available
+			[!] : you can know how many pixels are changed
+
+
+----------==========----------==========----------==========----------
+
